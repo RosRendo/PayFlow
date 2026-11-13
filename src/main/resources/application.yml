@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: payflow-api
+  profiles:
+    active: dev
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+server:
+  port: 8085
+  servlet:
+    context-path: /
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /api-docs
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
